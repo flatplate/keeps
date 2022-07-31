@@ -12,10 +12,10 @@ and I don't know why, so better be careful.
 
 ## Installation
 
-You can install keeps using `go install` (probably, not tested yet)
+You can install keeps using `go install`
 
 ```bash
-go install github.com/flatplate/keeps
+go install github.com/flatplate/keeps@latest
 ```
 
 ## Usage
