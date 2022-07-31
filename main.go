@@ -290,7 +290,7 @@ func InitTable(m model) model {
 	h = h - top - bottom - 2
 
 	entries := m.db.Content.Root.Groups[0].Entries
-	m.table = table.New([]string{"ID", "TITLE", "UserName", "PASS"}, w, h)
+	m.table = table.New([]string{"Index", "Title", "User name", "Password", "URL"}, w, h)
 	rows := make([]table.Row, len(entries))
 	for i, entry := range entries {
 		rows[i] = table.SimpleRow{
@@ -298,6 +298,7 @@ func InitTable(m model) model {
 			entry.GetTitle(),
 			entry.Get("UserName").Value.Content,
 			strings.Repeat("*", 12),
+			entry.Get("URL").Value.Content,
 		}
 	}
 
